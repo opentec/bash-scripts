@@ -12,8 +12,7 @@ else
 echo "Finished backing up database";
 
 echo "Backing up config files";
-sudo rsync -av --progress /var/www/html/nextcloud/config "$_dir"/nc-dirbackups/
-mv "$_dir"/nc-dirbackups/config "$_dir"/nc-dirbackups/config_`date +"%Y%m%d"`
+sudo rsync -av --progress /var/www/html/nextcloud/config "$_dir"/nc-dirbackups/config_`date +"%Y%m%d"`
 echo "Finished backing up config files";
 
 echo "Backing up data files";
